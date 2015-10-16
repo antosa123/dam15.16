@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Principal"
+    android:id="@+id/rl">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Nom"
+        android:id="@+id/tv_nom"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/et_nom"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/tv_nom" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:orientation="vertical"
+        android:id="@+id/rg_sexe"
+        android:layout_below="@+id/et_nom"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mascle"
+            android:id="@+id/rb_mascle"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Femella"
+            android:id="@+id/rb_femella"
+            android:checked="false" />
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EnviarDades"
+        android:id="@+id/b_enviaDades"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="44dp"
+        android:layout_above="@+id/tv_dades_rebudes"
+        android:layout_toEndOf="@+id/sw" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/tv_dades_rebudes"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="34dp" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rb"
+        android:numStars="5"
+        android:layout_below="@+id/rg_sexe"
+        android:layout_alignStart="@+id/et_nom"
+        />
+
+    <SeekBar
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/sb"
+        android:max="100"
+        android:indeterminate="false"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Carnet"
+        android:id="@+id/sw"
+        android:checked="false"
+        android:layout_above="@+id/b_enviaDades"
+        android:layout_alignStart="@+id/sb" />
+
+
+</RelativeLayout>
