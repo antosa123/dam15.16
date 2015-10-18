@@ -26,6 +26,9 @@ public class Principal extends Activity {
     RatingBar star;
     SeekBar linea;
 
+    TextView punt;
+    TextView valor;
+
     final int SUBACTIVITY_1=1;
 
     @Override
@@ -39,9 +42,41 @@ public class Principal extends Activity {
         dadesRebudes = (TextView) findViewById(R.id.tv_dades_rebudes);
         //Inicializar el nous parametres
         carnet = (Switch) findViewById(R.id.sw);
-        star = (RatingBar) findViewById(R.id.rb);
-        linea = (SeekBar) findViewById(R.id.sb);
 
+        star = (RatingBar) findViewById(R.id.rb);
+        valor = (TextView) findViewById(R.id.vs);
+
+        linea = (SeekBar) findViewById(R.id.sb);
+        punt = (TextView) findViewById(R.id.sp);
+
+        //Muestro el valor de las estrellas con getRating
+        valor.setText(String.valueOf(star.getRating()));
+
+        //Mostrar el valor del seekbar
+        linea.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                punt.setText("valor:"+ progress);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+        //clasificacion de las estrellas
+        star.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+                valor.setText("Rating: "+String.valueOf(rating));
+            }
+        });
 
         //Afegim un Listener al botó
         botoEnviaDades.setOnClickListener(new View.OnClickListener() {

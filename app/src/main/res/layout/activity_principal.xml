@@ -25,9 +25,8 @@
         android:layout_toEndOf="@+id/tv_nom" />
 
     <RadioGroup
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
         android:orientation="vertical"
         android:id="@+id/rg_sexe"
         android:layout_below="@+id/et_nom"
@@ -55,9 +54,9 @@
         android:text="EnviarDades"
         android:id="@+id/b_enviaDades"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="36dp"
         android:layout_above="@+id/tv_dades_rebudes"
-        android:layout_toEndOf="@+id/sw" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="fill_parent"
@@ -73,9 +72,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/rb"
         android:numStars="5"
-        android:layout_below="@+id/rg_sexe"
-        android:layout_alignStart="@+id/et_nom"
-        />
+        android:layout_below="@+id/vs"
+        android:layout_alignStart="@+id/et_nom" />
 
     <SeekBar
         android:layout_width="300dp"
@@ -83,7 +81,7 @@
         android:id="@+id/sb"
         android:max="100"
         android:indeterminate="false"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/sp"
         android:layout_centerHorizontal="true" />
 
     <Switch
@@ -93,7 +91,26 @@
         android:id="@+id/sw"
         android:checked="false"
         android:layout_above="@+id/b_enviaDades"
-        android:layout_alignStart="@+id/sb" />
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sp"
+        android:text="valor"
+        android:textAlignment="textStart"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/vs" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="puntuació"
+        android:id="@+id/vs"
+        android:layout_marginLeft="140dp"
+        android:layout_below="@+id/rg_sexe"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp" />
 
 
 </RelativeLayout>
