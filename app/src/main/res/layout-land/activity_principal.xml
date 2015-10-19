@@ -54,9 +54,8 @@
         android:text="@string/b_enviaDades"
         android:id="@+id/b_enviaDades"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="36dp"
         android:layout_above="@+id/tv_dades_rebudes"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignStart="@+id/rb" />
 
     <TextView
         android:layout_width="fill_parent"
@@ -64,16 +63,16 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/tv_dades_rebudes"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="34dp" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
 
     <RatingBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/rb"
         android:numStars="5"
-        android:layout_below="@+id/vs"
-        android:layout_alignStart="@+id/et_nom" />
+        android:layout_above="@+id/vs"
+        android:layout_alignEnd="@+id/tv_dades_rebudes" />
 
     <SeekBar
         android:layout_width="300dp"
@@ -81,8 +80,8 @@
         android:id="@+id/sb"
         android:max="100"
         android:indeterminate="false"
-        android:layout_below="@+id/sp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
 
     <Switch
         android:layout_width="wrap_content"
@@ -99,18 +98,17 @@
         android:id="@+id/sp"
         android:text="@string/sp"
         android:textAlignment="textStart"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/vs" />
+        android:layout_below="@+id/rb"
+        android:layout_toEndOf="@+id/rg_sexe"
+        android:layout_marginStart="35dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/vs"
         android:id="@+id/vs"
-        android:layout_marginLeft="140dp"
-        android:layout_below="@+id/rg_sexe"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp" />
+        android:layout_above="@+id/sb"
+        android:layout_toEndOf="@+id/b_enviaDades" />
 
 
 </RelativeLayout>

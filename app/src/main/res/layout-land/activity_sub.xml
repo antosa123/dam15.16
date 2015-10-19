@@ -12,8 +12,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/benvinguda"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/tv_edat" />
+         />
 
     <EditText
         android:layout_width="wrap_content"
@@ -22,7 +21,7 @@
         android:ems="10"
         android:id="@+id/etedat"
         android:layout_below="@+id/benvinguda"
-        android:layout_centerHorizontal="true" />
+        android:layout_toEndOf="@+id/tv_edat" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -30,8 +29,8 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/tv_edat"
         android:id="@+id/tv_edat"
-        android:layout_below="@+id/benvinguda"
-        android:layout_toStartOf="@+id/etedat" />
+        android:layout_alignParentLeft="@+id/etedat"
+        android:layout_alignBottom="@+id/etedat" />
 
     <Button
         android:layout_width="wrap_content"
@@ -39,7 +38,7 @@
         android:text="Acabar"
         android:id="@+id/b_acabar"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignEnd="@+id/l" />
 
     <TextView
         android:layout_width="fill_parent"
@@ -47,8 +46,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/l"
         android:id="@+id/l"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true" />
+        android:layout_above="@+id/b_acabar"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="25dp" />
 
     <TextView
         android:layout_width="fill_parent"
@@ -56,9 +56,8 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/s"
         android:id="@+id/s"
-        android:layout_above="@+id/l"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="56dp" />
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -66,8 +65,8 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/c"
         android:id="@+id/c"
-        android:layout_marginTop="47dp"
-        android:layout_below="@+id/l"
+        android:layout_alignTop="@+id/b_acabar"
+        android:layout_toEndOf="@+id/benvinguda"
         android:layout_alignParentStart="true" />
 
 </RelativeLayout>

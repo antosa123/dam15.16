@@ -35,7 +35,7 @@ public class subActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub);
         //Enllacem el TextView de l'XML (activity_sub.xml) amb un Objecte TextView de Java
-        tv_benvinguda = (TextView) findViewById(R.id.tv_benvinguda);
+        tv_benvinguda = (TextView) findViewById(R.id.benvinguda);
         // Enllacem el botó acabar de l'XML amb un objecte Botó de Java
         acabar = (Button) findViewById(R.id.b_acabar);
         //Enllacem el EditText de l'xml amb un objecte EditText de Java
@@ -58,9 +58,9 @@ public class subActivity extends Activity {
 
             //preguntar
             if(sexe.compareTo("Mascle")==0){
-                missatge="Hola en "+nom+", indica'ns les següents dades:";
+                missatge="Hola "+getString(R.string.don)+" "+nom+" "+getString(R.string.indicaedat);
             }else{
-                missatge="Hola na "+nom+", indica'ns les següents dades:";
+                missatge="Hola "+getString(R.string.dona)+" "+nom+" "+getString(R.string.indicaedat);
             }
             tv_benvinguda.setText(missatge.toString());
 

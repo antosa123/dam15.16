@@ -1,7 +1,20 @@
 <resources>
     <string name="app_name">Parametres</string>
-
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_sub">subActivity</string>
-</resources>
+    <string name="don">en</string>
+    <string name="dona">na</string>
+    <string name="indicaedat">indicans les següents dades</string>
+    <string name="tv_nom">Nom</string>
+    <string name="rb_mascle">Mascle</string>
+    <string name="rb_femella">Femella</string>
+    <string name="b_enviaDades">ENVIARDADES</string>
+    <string name="sw">Carnet</string>
+    <string name="sp">valor</string>
+    <string name="vs">puntuació</string>
+    <string name="tv_edat">Edat</string>
+    <string name="l">Punts</string>
+    <string name="s">Ranking estrel·les</string>
+    <string name="c">Carnet</string>
+    </resources>

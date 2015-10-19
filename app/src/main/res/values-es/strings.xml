@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Parametros</string>
+    <string name="action_settings">Configuraciones</string>
+    <string name="hello_world">Hola Mundo!</string>
+    <string name="title_activity_sub">SubActividad</string>
+    <string name="don">don</string>
+    <string name="dona">doña</string>
+    <string name="indicaedat">indicanos los siguientes datos</string>
+    <string name="tv_nom">Nombre</string>
+    <string name="rb_mascle">Hombre</string>
+    <string name="rb_femella">Mujer</string>
+    <string name="b_enviaDades">ENVIARDATOS</string>
+    <string name="sw">Carné</string>
+    <string name="sp">valor</string>
+    <string name="vs">puntuación</string>
+    <string name="tv_edat">Edad</string>
+    <string name="l">Puntos</string>
+    <string name="s">Ranking estrellas</string>
+    <string name="c">Carné</string>
+</resources>

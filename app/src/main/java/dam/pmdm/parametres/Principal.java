@@ -52,11 +52,19 @@ public class Principal extends Activity {
         //Muestro el valor de las estrellas con getRating
         valor.setText(String.valueOf(star.getRating()));
 
+        //clasificacion de las estrellas
+        star.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+                valor.setText("Rating: " + String.valueOf(rating));
+            }
+        });
+
         //Mostrar el valor del seekbar
         linea.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                punt.setText("valor:"+ progress);
+                punt.setText("valor:" + progress);
             }
 
             @Override
@@ -67,14 +75,6 @@ public class Principal extends Activity {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
 
-            }
-        });
-
-        //clasificacion de las estrellas
-        star.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-            @Override
-            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-                valor.setText("Rating: "+String.valueOf(rating));
             }
         });
 
